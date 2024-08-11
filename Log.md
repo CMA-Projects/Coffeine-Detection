@@ -15,3 +15,10 @@
     version = project.version(1)
     dataset = version.download("yolov8")
     ```
+
+### August 10, 2024
+* There are multiple ways to handle the data
+* However, focus on the goal of being able to measure the caffeine levels through an image of coffee
+    * Not all coffees are the same size
+    * Sometimes, the image of coffee will also include the cup (different colors)
+    * Even if you scale all the images to the same size so that the image procesing algorithm can analyze it, there will be "background noise" or "unecessary data"
