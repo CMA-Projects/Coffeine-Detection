@@ -8,7 +8,7 @@ import io
 
 app = Flask(__name__)
 
-# Loaed the model
+# Load the model
 print(f"Loading model...")
 model = load_model('models/cnn_model_v2.h5')
 print(f"Model loaded successfully!")

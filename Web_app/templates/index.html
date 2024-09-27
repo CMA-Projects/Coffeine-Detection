@@ -7,15 +7,19 @@
     <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
-    <h1>Caffeine Prediction</h1>
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" id="imageInput" name="image" accept="image/*" required>
-        <br><br>
-        <button type="submit">Upload and Classify</button>
-    </form>
+    <header>
+        <h1>Caffeine Prediction</h1>
+    </header>
 
-    <div id="result"></div>
+    <main>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="imageInput" name="image" accept="image/*" required>
+            <br><br>
+            <button type="submit">Upload and Classify</button>
+        </form>
 
+        <div id="result"></div>
+    </main>
 
     <script src="static/script.js"></script>
 </body>
