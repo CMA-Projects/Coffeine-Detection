@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from PIL import Image
-from utils.prediction import predict_intensity, is_image
+from utils.prediction import predict_intensity, is_image, scale
 import numpy as np
 import io
 
@@ -36,11 +36,13 @@ def predict():
     
     try:
         result = predict_intensity(file, model, img_size=TARGET_SIZE)
+        result_scaled = scale(result)
 
-        if result is not None:
+        if result_scaled is not None:
             return jsonify({
                 'success': True,
-                'prediction': f"{result:.2f}"
+                'prediction': f"{result:.2f}",
+                'prediction_scaled': f"{result_scaled:.2f}",
             })
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})

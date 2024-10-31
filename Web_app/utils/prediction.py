@@ -46,3 +46,26 @@ def predict_intensity(file, model, img_size=(64, 64)):
     except Exception as e:
         print(f"Error in predict_intensity: {e}")
         return None
+
+def scale(grayscale):
+    if grayscale >= 170:
+        return 0
+    if grayscale >= 160:
+        return 1
+    if grayscale >= 150:
+        return 2
+    if grayscale >= 140:
+        return 3
+    if grayscale >= 130:
+        return 4
+    if grayscale >= 120:
+        return 5
+    if grayscale >= 110:
+        return 6
+    if grayscale >= 100:
+        return 7
+    if grayscale >= 90:
+        return 8
+    if grayscale >= 80:
+        return 9
+    return 10

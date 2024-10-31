@@ -1,82 +1,134 @@
 /* static/styles.css */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font for fun vibe */
+    background-color: #f6f4e6; /* Warm beige background */
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: flex-start; /* Align items at the start (top) */
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: #333;
+    min-height: 100vh; /* Full height view */
+    color: #3b2e25; /* Dark brown text */
+    position: relative; /* Allow absolute positioning of child elements */
 }
 
 header {
     width: 100%;
     text-align: center;
-    padding: 20px 0;
-    background-color: #e8e8e8; /* Optional background color for header */
-    border-bottom: 2px solid #ccc;
-    border: 2px solid #ff0000;
+    padding: 30px 0; /* Increased padding for a bolder header */
+    background-color: #4b3c2b; /* Darker coffee background */
+    color: #e8d5c4; /* Light cream text */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for a lifted effect */
 }
 
 h1 {
-    color: #444;
-    font-size: 2rem;
-    border: 2px solid #010dff;
+    font-size: 3rem; /* Larger font size for impact */
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.2); /* Enhanced soft text shadow */
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px; /* Add some space below the header */
-    border: 2px solid #44ff00;
+    margin-top: 20px;
+    padding: 30px; /* Increased padding for a more spacious layout */
+    width: 100%;
+    max-width: 500px; /* Limit max-width for better readability */
+    border: 2px dashed #c4b8a0; /* Dashed border for a fun touch */
+    border-radius: 12px; /* Rounded corners for playfulness */
+    background-color: #fff; /* White background for contrast */
 }
 
 form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    background-color: #ffffff; /* White background for contrast */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
     width: 100%;
+    max-width: 400px;
     text-align: center;
-    border: 2px solid #ff02ee;
 }
 
 input[type="file"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
+    padding: 12px;
+    border: 2px solid #e2b167; /* Light caramel border */
+    border-radius: 8px;
+    background-color: #f8f1e6; /* Light beige background */
     margin-bottom: 20px;
+    font-size: 1.1rem; /* Slightly larger font for better accessibility */
     cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s; /* Add background color transition */
+}
+
+input[type="file"]:hover {
+    border-color: #4b3c2b; /* Darker border on hover */
+    background-color: #f2e8d3; /* Slightly darker background on hover */
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #5cb85c;
-    color: white;
+    width: 100%;
+    padding: 12px 0;
+    background-color: #6f4c3e; /* Coffee color button */
+    color: #ffffff;
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem; /* Slightly larger font */
+    font-weight: bold; /* Bold text for button */
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Added transform for effect */
 }
 
 button:hover {
-    background-color: #4cae4c;
+    background-color: #5c4032; /* Darker coffee shade on hover */
+    transform: scale(1.05); /* Slight scaling on hover */
 }
 
-#result {
+#result, #result2 {
     margin-top: 20px;
-    font-size: 1.2rem;
-    color: #555;
-    border: 2px solid #ffcc00;
-    padding: 10px;
-    border-radius: 4px;
+    font-size: 1.2rem; /* Slightly larger font for results */
+    color: #3b2e25; /* Dark brown text */
+    background-color: #f8f1e6; /* Light beige background for results */
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #e2b167; /* Light caramel border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Slight shadow */
+    width: 100%;
+    max-width: 400px;
+    text-align: center; /* Center text for better presentation */
+}
+
+/* Add a textured background to the body */
+body::before {
+    content: '';
+    background-image: url('path/to/your/coffee-texture.jpg'); /* Path to a subtle coffee texture */
+    opacity: 0.05; /* Light texture overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Place it behind all other elements */
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px; /* Add padding for mobile */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Adjusted for smaller screens */
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px 0;
+    }
 }

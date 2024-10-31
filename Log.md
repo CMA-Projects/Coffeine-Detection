@@ -1,3 +1,8 @@
+### Oct 10, 2024
+* Editing Webpage code
+* Make sure to run the webpage by using the terminal and running ```flask run --port=5001```
+
+
 ### August 8, 2024
 * Brief introudction
 * IDE and Code setup
